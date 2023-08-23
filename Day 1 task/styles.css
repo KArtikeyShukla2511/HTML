@@ -1,0 +1,51 @@
+.card{
+    display:flex ;
+    height: 138px;
+    width: 457px;
+    gap: 14px;
+    margin: 4px;
+    
+    
+}
+
+h3{
+    font-family:'Roboto Bold';
+    font-size: 20px;
+    margin-bottom: 14px;
+    color: #000000;
+    
+}
+#text{
+    font-family:'Roboto Normal';
+    font-size: 20px;
+    margin: 0px;
+    color: #000000;
+    
+}
+.avatar{
+   width: 130px;
+   height: 130px;
+    
+}
+
+.actionbar-container{
+    display: flex;
+    gap: 14px;
+    row-gap: 24px;
+    margin-top: 24px;
+}
+.actionbar{
+    height: 20px;
+    width: 20px;
+    
+}
+
+#num{
+    
+    padding-right: 10px;
+    margin: 0px;
+    font-family:'Roboto Medium';
+    font-size: 15px;
+    
+    color: #858991;
+}
