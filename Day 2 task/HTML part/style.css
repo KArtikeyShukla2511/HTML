@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(255, 255, 202);
+}
+h1{
+    background-color: brown;
+    text-align: center;
+    border-bottom: 10px solid red;
+
+}
+
+h2{
+    background-color: green;
+
+}
+
+b{
+    text-transform: uppercase;
+    font-style: italic
+}
+
+ol,ul{
+    color: brown;
+}
+a{
+    color: blueviolet;
+}
+h3{
+    color: gray;
+}
+table{
+    background-color: rgb(161, 157, 157);
+}
+img{
+    border: 2px dotted gray;
+    
+}
+textarea{
+    height: 150px;
+    overflow-y: scroll;
+    resize: none;
+}

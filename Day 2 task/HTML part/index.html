@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="myscripts.js"></script>
+    <title>Task-2</title>
+  </head>
+  <body>
+    <h1>My first web page</h1>
+    <h2><p>What this is</p></h2>
+    <p>
+      Welcome to <i>my first webpage</i>. I created this webpage without the
+      assistance of a webpage editor. Just my little text editor and a keen
+      <b>understanding of HTML.</b>
+    </p>
+    <h2><p>What this is</p></h2>
+    <ul>
+      <li>To learn HTML</li>
+      <li>
+        List element
+        <ol>
+          <li>Home</li>
+          <li>FAQ</li>
+          <li>Contact</li>
+          <li>About</li>
+        </ol>
+      </li>
+      <li>Here I have created ordered and unordered List</li>
+    </ul>
+
+    <h2><p>ZeusLearning.com</p></h2>
+    <p>
+      <a href="https://zeuslearning.com" target="_blank"
+        >This link will open zeuslearning.com in a new tab</a
+      >
+    </p>
+    <h2><p>On click of the following image navigate to Google.com</p></h2>
+    <a href="https://www.google.com" target="_blank">
+      <img src="images/Google.png" alt="Google" />
+    </a>
+    <h3>Some random table</h3>
+    <table border="1">
+      <tr>
+        <td>Row 1, cell 1</td>
+        <td>Row 1, cell 2</td>
+        <td>Row 1, cell 3</td>
+      </tr>
+      <tr>
+        <td>Row 2, cell 1</td>
+        <td>Row 2, cell 2</td>
+        <td>Row 2, cell 3</td>
+      </tr>
+      <tr>
+        <td>Row 3, cell 1</td>
+        <td>Row 3, cell 2</td>
+        <td>Row 3, cell 3</td>
+      </tr>
+      <tr>
+        <td>Row 4, cell 1</td>
+        <td>Row 4, cell 2</td>
+        <td>Row 4, cell 3</td>
+      </tr>
+    </table>
+    <form onsubmit="return validateForm()">
+      <h3><p>Some random form</p></h3>
+      <p><b>Note:</b> It looks the part, but won't do anything.</p>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your name" />
+      <p>Comments:</p>
+      <textarea
+        id="comments"
+        name="comments"
+        rows="4"
+        cols="50"
+        placeholder="Your comments"
+      ></textarea>
+      <p>Are you:</p>
+      <input type="radio" id="male" name="gender" value="Male" />
+      <label for="male">Male</label><br /><br />
+      <input type="radio" id="female" name="gender" value="Female" />
+      <label for="female">Female</label><br /><br />
+      <input type="submit" value="Submit Query" />
+    </form>
+  </body>
+</html>
