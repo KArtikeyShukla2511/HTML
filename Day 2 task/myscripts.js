@@ -8,7 +8,11 @@ function validateForm() {
         alert("All fields are compulsory");
         if (name === "") {
             document.getElementById("name").focus();
-        } else {
+        } 
+        if(comment===""){
+            document.getElementById("name").focus();
+        }
+        else {
             document.getElementById("comment").focus();
         }
         return false;
