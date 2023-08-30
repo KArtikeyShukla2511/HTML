@@ -5,20 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="dashboard.css" />
+    <link href="https://db.onlinewebfonts.com/c/75958886ff7389a59bc57360bf8559c9?family=Museo+Sans+500+Regular" rel="stylesheet">
   </head>
   <body>
     <div class="header">
       <div><img src="icons/logo used in header.svg" /></div>
       <div class="navbar">
-        <a href="#">DASHBOARD</a>
+        <a class="active" href="#">DASHBOARD</a>
         <a href="#">CONTENT</a>
         <a href="#">USERS</a>
         <a href="#">REPORTS</a>
         <a href="#">ADMIN</a>
       </div>
 
-      <div><img src="icons/alerts.svg" /></div>
-      <div><img src="icons/announcements.svg" /></div>
+      <div class="count"><img src="icons/alerts.svg" /><span class="badge">2</span></div>
+      <div class="count"><img src="icons/announcements.svg" /><span class="badge">1</span></div>
       <div class="side-menu-toggle"><img src="icons/hamburger-menu.svg" /></div>
     </div>
 
@@ -50,12 +51,14 @@
           <div class="Sort">
             <div>
               <label for="Sortby">Sort by</label>
-              <select class="filterdrop" name="Courses" id="courses">
-                <option>Course Name</option>
-              </select>
-            </div>
+            </div>  
+            <div><select class="filterdrop" name="Courses" id="courses">
+                  <option>Course Name</option>
+                </select>
+            </div>    
+            
             <div>
-              <img src="icons/sort.svg" />
+              <img class="image-sort" src="icons/sort.svg" />
             </div>
           </div>
         </div>
@@ -65,10 +68,12 @@
             <div class="Course-1-content">
               <div><img src="images/imageMask-1.png" /></div>
               <div class="Content-1">
-                <div>Acceleration</div>
+                <div class="content-heading">Acceleration</div>
 
-                <div>Physics | Grade 7<span>+2</span></div>
-                <div><b>4</b> units <b>18</b> Lessons <b>24</b> Topics</div>
+                <div class="subject">
+                  <div>Physics</div><div>|</div><div>Grade 7<span>+2</span></div>
+                </div>
+                <div class="units"><b>4</b> units <b>18</b> Lessons <b>24</b> Topics</div>
                 <div>
                   <select class="drop" name="class" id="classB">
                     <option>Mr. Franks's Class B</option>
@@ -93,10 +98,12 @@
             <div class="Course-2-content">
               <div><img src="images/imageMask-2.png" /></div>
               <div class="Content-1">
-                <div>Displacement, Velocity and speed</div>
+                <div class="content-heading">Displacement, Velocity and speed</div>
 
-                <div>Physics | Grade 6<span>+3</span></div>
-                <div><b>2</b> units <b>15</b> Lessons <b>20</b>Topics</div>
+                <div class="subject">
+                  <div>Physics</div><div>|</div><div>Grade 7<span>+2</span></div>
+                </div>
+                <div class="units"><b>2</b> units <b>15</b> Lessons <b>20</b>Topics</div>
                 <div>
                   <select class="drop" name="noclass" id="noclass">
                     <option>No Classes</option>
@@ -105,10 +112,10 @@
               </div>
               <div><img src="icons/favourite.svg" /></div>
             </div>
-            <div class="Course-2-footer">
+            <div class="Course-1-footer">
               <div><img src="icons/preview.svg" /></div>
-              <div><img src="icons/manage course.svg" /></div>
-              <div><img src="icons/grade submissions.svg" /></div>
+              <div><img  class="fade" src="icons/manage course.svg" /></div>
+              <div><img class="fade" src="icons/grade submissions.svg" /></div>
               <div><img src="icons/reports.svg" /></div>
             </div>
           </div>
@@ -116,35 +123,41 @@
             <div class="Course-1-content">
               <div><img src="images/imageMask-3.png" /></div>
               <div class="Content-1">
-                <div>
+                <div class="content-heading">
                   Introduction to Biology: Microorganims and how they affec...
                 </div>
 
-                <div>Biology | Grade 4<span>+1</span></div>
-                <div><b>5</b> units <b>16</b> Lessons <b>22</b>Topics</div>
+                <div class="subject">
+                  <div>Physics</div><div>|</div><div>Grade 7<span>+2</span></div>
+                </div>
+                <div class="units"><b>5</b> units <b>16</b> Lessons <b>22</b>Topics</div>
                 <div>
                   <select class="drop" name="AllClass" id="Allclass">
                     <option>All Classes</option>
                   </select>
                 </div>
-                <div>300 students</div>
+                <div class="information">300 students</div>
               </div>
               <div><img src="icons/favourite.svg" /></div>
             </div>
             <div class="Course-1-footer">
               <div><img src="icons/preview.svg" /></div>
-              <div><img src="icons/manage course.svg" /></div>
-              <div><img src="icons/grade submissions.svg" /></div>
+              <div><img class="fade" src="icons/manage course.svg" /></div>
+              <div><img class="fade" src="icons/grade submissions.svg" /></div>
               <div><img src="icons/reports.svg" /></div>
             </div>
           </div>
           <div class="Course-4">
-            <div class="Course-1-content">
+            <span class="expired">EXPIRED</span>
+            <div class="Course-4-content">
+              
               <div><img src="images/imageMask.png" /></div>
               <div class="Content-1">
-                <div>Introduction to High School Mathematics</div>
+                <div class="content-heading">Introduction to High School Mathematics</div>
 
-                <div>Mathematics | Grade 8<span>+3</span></div>
+                <div class="subject">
+                  <div>Physics</div><div>|</div><div>Grade 7<span>+2</span></div>
+                </div>
                 <div>
                   <select class="drop" name="class" id="classA">
                     <option>Mr. Franks's Class A</option>
@@ -156,7 +169,7 @@
                   <div>14-Oct-2019 -20-Oct-2020</div>
                 </div>
               </div>
-              <div><img src="icons/favourite.svg" /></div>
+              <div><img  class="gray" src="icons/favourite.svg" /></div>
             </div>
             <div class="Course-1-footer">
               <div><img src="icons/preview.svg" /></div>

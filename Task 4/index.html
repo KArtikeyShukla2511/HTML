@@ -19,7 +19,7 @@
         <form class="login">
           <div class="select">
             <input type="radio" name="Area" id="District" />
-            <label for="District">District</label>
+            <label for="District" style="margin-right: 32px;">District</label>
             <input type="radio" name="Area" id="Independent-school" />
             <label for="Independent-school">Independent School</label>
           </div>
@@ -29,13 +29,13 @@
               <option value="Alabama">Alabama</option>
             </select>
           </div>
-          <div class="menu">
-            <label for="District">District</label>
+          <div class="District">
+            <label  for="District">District</label>
             <select class="drop" name="Alabama" id="Alabama-School">
               <option value="Alabama">Alabama School District</option>
             </select>
           </div>
-          <div>
+          <div class="Username">
             <input
               class="login-input"
               type="text"
@@ -63,8 +63,10 @@
 
           </div>
           <p>FORGOT PASSWORD ?</p>
-          <input type="checkbox" name="Remember-me" id="Remember-me" />
-          <label for="Remember">Remember Me</label>
+          <div class="Remember">
+            <input type="checkbox" name="Remember-me" id="Remember-me" />
+            <label for="Remember">Remember Me</label>
+          </div>
 
           <div class="btn">
             <button class="login-btn" type="submit">LOG IN</button>
@@ -79,7 +81,7 @@
       <div class="footer">
         <img src="icons/logo used in footer.svg" />
         <span></span>
-        <p>
+        <p class="foot">
           Copyright &copy; 2020-2021 <strong>Zeus Systems Pvt. Ltd.</strong> All
           rights reserved.
         </p>

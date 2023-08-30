@@ -1,4 +1,13 @@
 @font-face {
+  font-family: "Museo Sans 500 Regular";
+  src: url("https://db.onlinewebfonts.com/t/75958886ff7389a59bc57360bf8559c9.eot");
+  src: url("https://db.onlinewebfonts.com/t/75958886ff7389a59bc57360bf8559c9.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/75958886ff7389a59bc57360bf8559c9.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/75958886ff7389a59bc57360bf8559c9.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/75958886ff7389a59bc57360bf8559c9.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/75958886ff7389a59bc57360bf8559c9.svg#Museo Sans 500 Regular")format("svg");
+}
+@font-face {
   font-family: Quicksand;
   src: url(Quicksand-font-1/Quicksand-VariableFont_wght.ttf);
 }
@@ -41,7 +50,7 @@ article > * {
   align-items: center;
   padding: 10px;
   background-color: #333;
-  color: white;
+  color: greenyellow;
 }
 
 .header > div:nth-child(2) {
@@ -57,11 +66,17 @@ article > * {
 
 /* Style for navbar items */
 .navbar a {
-  color: white;
+  color: #3FD28B;
   text-decoration: none;
   margin-right: 20px;
   transition: color 0.3s;
-  font: Quicksand-medium;
+  font-family: Quicksand;
+  font-weight: normal;
+  font-size: 14px;
+}
+.navbar .active{
+  color: white;
+  border-bottom: 2px solid white;
 }
 
 /* Define the styling for the side menu */
@@ -85,11 +100,20 @@ article > * {
   padding: 10px;
   transition: background-color 0.3s;
 }
-
+.count {
+  position: relative;
+}
+.badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #2a7ff3;
+  padding: 3px 5px;
+  border-radius: 50%;
+}
 body {
   margin: 0;
   background: #eeeeee 0% 0% no-repeat padding-box;
-  font-family: Quicksand-medium;
 }
 
 .content {
@@ -110,36 +134,73 @@ body {
   display: flex;
   gap: 8px;
   justify-content: center;
-  margin-top: 19px;
-  margin-bottom: 15px;
+  padding-top: 19px;
+  padding-bottom: 15px;
+  width: 100%;
+  align-items: center;
 }
-
+.Classes,
+.Course > div:nth-child(2) {
+  font-family: Quicksand;
+  font-weight: bold;
+  font-size: 24px;
+}
+.Classes > div:nth-child(3) {
+  font-family: Quicksand;
+  font-weight: normal;
+  font-size: 16px;
+}
 .Course {
-  border-bottom: 2px solid black;
+  border-bottom: 4px solid black;
 }
 
 .filter {
   display: flex;
-  grid-column: 1/-1;
-  justify-content: space-around;
+
+  justify-content: space-between;
   padding-top: 5px;
-  padding-bottom: 10px;
+  padding-bottom: 17px;
   border-bottom: 2px solid lightgray;
   margin-bottom: 16px;
+  width: 100%;
+}
+.filter > div:nth-child(1) {
+  font-family: Quicksand;
+  font-weight: normal;
+  font-size: 12px;
+}
+.filter > div:nth-child(2) {
+  font-family: Quicksand;
+  font-weight: 16px;
+  font-size: 12px;
 }
 .Sort {
   display: flex;
-  gap: 10px;
+  gap: 6px;
 }
 .filterdrop {
   border: none;
   border-bottom: 2px solid rgb(155, 152, 152);
-  background-color: lightgray;
+  background: #eeeeee 0% 0% no-repeat padding-box;
+
+  font-family: Quicksand;
+  font-weight: bold;
+  font-size: 16px;
+  width: 156px;
+  color: #333333;
+}
+
+.image-sort {
+  margin-left: 18px;
 }
 .drop {
   border: none;
   border-bottom: 2px solid lightgray;
   width: 100%;
+  font-family: Quicksand;
+  font-weight: 590;
+  font-size: 16px;
+  color: #222222;
 }
 
 .Courses {
@@ -148,25 +209,58 @@ body {
   gap: 26px;
 }
 
+.subject {
+  display: flex;
+  gap: 8px;
+  font-family: Quicksand;
+  font-weight: normal;
+  font-size: 12px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.units {
+  font-family: Quicksand;
+  font-weight: normal;
+  font-size: 12px;
+  margin-bottom: 18px;
+}
+
+.fade {
+  opacity: 0.5;
+}
 .Course-1 {
   grid-column: 1/2;
   background-color: white;
-  padding: 20px;
+  padding: 24px;
+  padding-bottom: 0px;
 }
 .Course-1-content {
   display: flex;
   gap: 16px;
 }
+.Course-4-content {
+  display: flex;
+  gap: 16px;
+}
 
+.expired {
+  position: absolute;
+  background-color: #ffe4e6;
+  padding: 4px 7px 2px 5px;
+  color: #d80000;
+  font-family:"Museo Sans 500 Regular";
+  font-size: 12px;
+  top: -0px;
+  left: -0px;
+}
 .Content-1 {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+
   width: 100%;
 }
-.Content-1 > div:nth-child(2) {
-  font-family: Quicksand-light;
-}
+
 .Course-1-footer {
   display: flex;
   gap: 10px;
@@ -179,7 +273,10 @@ body {
 }
 .information {
   display: flex;
-  gap: 10px;
+  gap: 8px;
+  font-family: Quicksand;
+  font-size: 12px;
+  margin-top: 8px;
 }
 
 .Course-2-content {
@@ -196,18 +293,36 @@ body {
   grid-column: 2/3;
   background-color: white;
   padding: 20px;
+  padding: 24px;
+  padding-bottom: 0px;
 }
 
 .Course-3 {
   grid-column: 1/2;
   background-color: white;
-  padding: 20px;
+  padding: 24px;
+  padding: 24px;
+  padding-bottom: 0px;
 }
 
 .Course-4 {
   grid-column: 2/3;
   background-color: white;
   padding: 20px;
+  padding: 24px;
+  padding-bottom: 0px;
+  position: relative;
+}
+
+.gray {
+  filter: grayscale(1);
+  opacity: 0.4;
+}
+
+.content-heading {
+  font-family: Quicksand;
+  font-weight: 550;
+  font-size: 16px;
 }
 
 .msg {
@@ -232,6 +347,10 @@ p > span {
   justify-content: center;
   align-items: center;
   margin-top: auto;
+  font-family: Quicksand;
+  font-weight: normal;
+  font-size:12px ;
+  color: #616161;
 }
 
 .footer > span {
