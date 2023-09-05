@@ -1,6 +1,6 @@
 @font-face {
   font-family: Quicksand;
-  src: url(Quicksand-font-1/Quicksand-VariableFont_wght.ttf);
+  src: url(../Quicksand-font-1/Quicksand-VariableFont_wght.ttf);
 }
 @font-face {
   font-family: Quicksand-bold;
@@ -214,7 +214,7 @@ input[type=checkbox] {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: auto;
+  margin-top: 12px;
   font-family: Quicksand;
   font-weight: normal;
   font-size: 12px;
