@@ -265,9 +265,6 @@ body {
   .announce.alert_active {
     max-height: 600px;
   }
-  .invisible {
-    visibility: hidden;
-  }
 }
 .badge {
   border-radius: 50%;
@@ -544,9 +541,6 @@ body {
   }
   .announce.alert_active {
     max-height: 600px;
-  }
-  .invisible {
-    visibility: hidden;
   }
 }
 @media screen and (min-width: 700px) and (max-width: 1225px) {
