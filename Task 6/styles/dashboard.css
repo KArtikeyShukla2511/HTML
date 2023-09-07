@@ -273,8 +273,8 @@ body {
   font-size: 10px;
   padding: 2px 5px;
   position: relative;
-  top: -10px;
-  right: 12px;
+  top: -18px;
+  right: 16px;
 }
 
 .badge1 {
@@ -284,8 +284,8 @@ body {
   font-size: 10px;
   padding: 2px 6px;
   position: relative;
-  top: -12px;
-  right: 6px;
+  top: -18px;
+  right: 10px;
 }
 
 .badge2 {
