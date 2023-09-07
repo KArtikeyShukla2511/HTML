@@ -1,11 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Todo List</title>
     <style>
       li {
         list-style: none;
@@ -14,18 +12,20 @@
         margin: 8px auto;
         background: #eee;
         border: 1px dotted #ddd;
+        cursor: pointer; /* Add cursor pointer for clickable tasks */
       }
     </style>
   </head>
   <body>
     <h1>Todos</h1>
+    <input type="text" id="newTodo" placeholder="Enter a new task" />
+    <button id="addTodo" disabled>Add New Todo</button>
     <ul>
       <li>buy milk</li>
       <li>read a book</li>
       <li>play the guitar</li>
       <li>pay the bills</li>
     </ul>
-    <button>add new todo</button>
     <script src="app.js"></script>
   </body>
 </html>
