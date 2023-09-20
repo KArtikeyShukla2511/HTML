@@ -15,6 +15,10 @@ function addToDo(event){
     event.preventDefault();
 
 
+    if (todoInput.value.trim() === "") {
+        return;
+    }
+
     const todoDiv = document.createElement("div");
     todoDiv.classList.add("todo");
 
