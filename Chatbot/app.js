@@ -4,8 +4,23 @@ const chatbox = document.querySelector(".chatbox");
 const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
 
-let userMessage = null; 
-const API_KEY = "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"; 
+ 
+let userMessage = null;
+let API_KEY = null; // Initialize API_KEY variable
+
+// Function to load API key from config.json
+const loadApiKey = async () => {
+  try {
+    const response = await fetch("config.json");
+    const config = await response.json();
+    API_KEY = config.API_KEY;
+  } catch (error) {
+    console.error("Error loading API key:", error);
+  }
+};
+
+// Call the function to load API key
+loadApiKey();
 const inputInitHeight = chatInput.scrollHeight;
 
 const createChatLi = (message, className) => {
@@ -21,20 +36,18 @@ const createChatLi = (message, className) => {
 const generateResponse = (chatElement) => {
     const API_URL = "https://api.openai.com/v1/chat/completions";
     const messageElement = chatElement.querySelector("p");
-
-    
+  
     const requestOptions = {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${API_KEY}`
-        },
-        body: JSON.stringify({
-            model: "gpt-3.5-turbo",
-            messages: [{role: "user", content: userMessage}],
-        })
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${API_KEY}`
+      },
+      body: JSON.stringify({
+        model: "gpt-3.5-turbo",
+        messages: [{ role: "user", content: userMessage }],
+      })
     }
-
    
     fetch(API_URL, requestOptions).then(res => res.json()).then(data => {
         messageElement.textContent = data.choices[0].message.content.trim();
